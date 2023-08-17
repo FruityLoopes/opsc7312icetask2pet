@@ -17,6 +17,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class PetInteractionFragment : Fragment() {
+    //Inside the PetInteractionsFragment, you'll handle the button clicks.
+    //or example, when the "Feed" button is clicked, you'll update the pet's hunger status and refresh the PetStatusFragment to reflect the changes.
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
