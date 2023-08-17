@@ -5,58 +5,38 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [PetInteractionFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class PetInteractionFragment : Fragment() {
-    //Inside the PetInteractionsFragment, you'll handle the button clicks.
-    //or example, when the "Feed" button is clicked, you'll update the pet's hunger status and refresh the PetStatusFragment to reflect the changes.
 
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    var feed:Int=1
+    var play:Int=1
+    var clean:Int=1
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pet_interaction, container, false)
-    }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PetInteractionFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PetInteractionFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+
+        val petinteraction = inflater.inflate(R.layout.fragment_pet_interaction, container, false)
+        val txtcurrenthunger: TextView = petinteraction.findViewById(R.id.txtcurrenthunger)
+        val txtcurrentplay: TextView = petinteraction.findViewById(R.id.txtcurrentplay)
+        val txtcurrentclean: TextView = petinteraction.findViewById(R.id.txtcurrentclean)
+        val btnfeed: Button = petinteraction.findViewById(R.id.btnfeed)
+        val btnplay: Button = petinteraction.findViewById(R.id.btnplay)
+        val btnclean: Button = petinteraction.findViewById(R.id.btnclean)
+
+        btnfeed.setOnClickListener(){
+             txtcurrenthunger.text = feed++.toString()
+        }
+        btnplay.setOnClickListener(){
+            txtcurrentplay.text = play++.toString()
+        }
+        btnclean.setOnClickListener(){
+            txtcurrentplay.text = clean++.toString()
+        }
+        return layout
     }
 }
