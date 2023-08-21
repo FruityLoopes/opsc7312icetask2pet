@@ -8,16 +8,18 @@
     tools:context=".PetStatusFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Statusimage"
         android:layout_width="183dp"
         android:layout_height="0dp"
         android:layout_gravity="center|top"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="25dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textViewName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/resource_default"
         tools:src="@tools:sample/avatars" />
 
     <TextView
@@ -31,7 +33,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/Statusimage" />
 
     <TextView
         android:id="@+id/textView2"
@@ -113,7 +115,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textViewClean"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/Statusimage"
         app:layout_constraintVertical_bias="0.857" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
