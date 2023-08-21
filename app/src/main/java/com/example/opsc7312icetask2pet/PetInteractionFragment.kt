@@ -37,6 +37,6 @@ class PetInteractionFragment : Fragment() {
         btnclean.setOnClickListener(){
             txtcurrentplay.text = clean++.toString()
         }
-        return layout
+        return petinteraction
     }
 }
