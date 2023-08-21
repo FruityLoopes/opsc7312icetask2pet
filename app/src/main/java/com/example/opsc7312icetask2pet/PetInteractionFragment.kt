@@ -32,7 +32,6 @@ class PetInteractionFragment : Fragment() {
         txtcurrentplay.text = pet.happiness.toString()
         txtcurrentclean.text = pet.cleanliness.toString()
         val Interactionimage: ImageView = petinteraction.findViewById(R.id.Interactionimage)
-        //Interactionimage.setImageResource(android.R.drawable.resource_default)
 
         btnfeed.setOnClickListener(){
             pet.hunger++
