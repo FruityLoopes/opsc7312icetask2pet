@@ -11,9 +11,7 @@ import android.widget.TextView
 
 class PetInteractionFragment : Fragment() {
 
-    var feed:Int=1
-    var play:Int=1
-    var clean:Int=1
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,15 +25,21 @@ class PetInteractionFragment : Fragment() {
         val btnfeed: Button = petinteraction.findViewById(R.id.btnfeed)
         val btnplay: Button = petinteraction.findViewById(R.id.btnplay)
         val btnclean: Button = petinteraction.findViewById(R.id.btnclean)
+        txtcurrenthunger.text = pet.hunger.toString()
+        txtcurrentplay.text = pet.happiness.toString()
+        txtcurrentclean.text = pet.cleanliness.toString()
 
         btnfeed.setOnClickListener(){
-             txtcurrenthunger.text = feed++.toString()
+            pet.hunger++
+             txtcurrenthunger.text = pet.hunger.toString()
         }
         btnplay.setOnClickListener(){
-            txtcurrentplay.text = play++.toString()
+            pet.happiness++
+            txtcurrentplay.text = pet.happiness.toString()
         }
         btnclean.setOnClickListener(){
-            txtcurrentplay.text = clean++.toString()
+            pet.cleanliness++
+            txtcurrentclean.text = pet.cleanliness.toString()
         }
         return petinteraction
     }
