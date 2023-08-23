@@ -34,17 +34,17 @@ class PetInteractionFragment : Fragment() {
         val Interactionimage: ImageView = petinteraction.findViewById(R.id.Interactionimage)
 
         btnfeed.setOnClickListener(){
-            pet.hunger++
-             txtcurrenthunger.text = pet.hunger.toString()
+            pet.feed()
+            txtcurrenthunger.text = pet.hunger.toString()
             Interactionimage.setImageResource(R.drawable.feed)
         }
         btnplay.setOnClickListener(){
-            pet.happiness++
+            pet.happy()
             txtcurrentplay.text = pet.happiness.toString()
             Interactionimage.setImageResource(R.drawable.play)
         }
         btnclean.setOnClickListener(){
-            pet.cleanliness++
+            pet.clean()
             txtcurrentclean.text = pet.cleanliness.toString()
             Interactionimage.setImageResource(R.drawable.clean)
         }
